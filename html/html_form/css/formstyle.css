@@ -1,0 +1,44 @@
+/*
+ *  STEP 1: change the bubble so background is white and text is green.
+ */
+
+/* Webkit */
+input::-webkit-validation-bubble-message {
+	color: green !important;
+	background: white;
+	border: 1px solid black;
+	padding: 18px;
+	
+}
+
+/* Polyfill styles to do the same as above */
+.wf2_errorMsg {
+	color: green !important;
+	background: white;
+}
+
+/* Removes the icon that appears in Webkit browsers by default */
+input::-webkit-validation-bubble-icon {
+	display: none;
+}
+
+/* Needed for IE to get rid of gradient background, or to replace it with another gradient */
+.wf2_errorMsg {
+	filter: none !important;
+}
+
+
+/*
+ * Step 2: The arrow
+ */
+
+input::-webkit-validation-bubble-arrow {
+    background: white;
+    border: solid black 1px;
+}
+
+/* Polyfill */
+.wf2_errorMsg:before {
+    /* By default, the image is 29x15, but you can change it and position it with CSS */
+    background: url('whiteValidationPointer.png') !important;
+}

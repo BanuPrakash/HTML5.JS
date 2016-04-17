@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<style type="text/css">
+    input:required, textarea:required{
+      background:url("css/asterisk_orange.png") no-repeat right top;
+	  }
+  	input[required]:valid, textarea[required]:valid {
+    	  background:url("css/tick.png") no-repeat right top !important;
+  	}
+  	input:focus:invalid, textarea:focus:invalid {
+    	background:url("css/cancel.png") no-repeat right top;
+  	}
+  </style>
+	</head>	
+	<body>
+		<form>
+    <table class="formTable">
+      <tr>
+        <th>Full Name :</th>
+         <td><input type="text" name="fullName" id="fn" value="" required=
+        "required" placeholder="Required information" /></td>
+      </tr>
+
+      <tr>
+        <th>Company Name :</th>
+
+        <td><input type="text" name="companyName" required=
+        "required" value="" placeholder=
+        "Required information" /></td>
+      </tr>
+
+      <tr>
+        <td></td>
+
+        <td><input type="submit" value="Submit Information" /></td>
+      </tr>
+    </table>
+  </form>
+</body>
+</html>
