@@ -1,0 +1,11 @@
+CACHE MANIFEST
+#VER 1.0
+CACHE:
+css/style.css
+js/sample.js
+favicon.ico
+NETWORK:
+*
+
+FALLBACK:
+css/online.css	css/offline.css

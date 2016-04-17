@@ -1,0 +1,31 @@
+<html>
+
+<body>
+<script>
+		var geolocation = null;
+		if (window.navigator && window.navigator.geolocation) {
+		  geolocation = window.navigator.geolocation;
+		}
+		if (geolocation) {
+			var position;
+		  	geolocation.getCurrentPosition(function(pos) {
+		  		position = pos;
+		    	console.log(pos);
+			});
+		 
+			var identifier = geolocation.watchPosition(function(pos) {
+				position = pos;
+		    	console.log(pos);
+		    	var image_url = "http://maps.google.com/maps/api/staticmap?sensor=false&center=" + position.coords.latitude + "," +
+                    position.coords.longitude + "&zoom=16&size=500x500&markers=color:red|label:P|" +
+                    position.coords.latitude + ',' + position.coords.longitude;
+
+              document.getElementById("map").src = image_url;
+			});
+		 	console.log(identifier);
+		}
+</script>
+		<img src="" id="map" />
+	</body>	
+
+</html>
