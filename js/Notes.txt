@@ -1,0 +1,374 @@
+
+JavaScript, HTML 5, CSS3 and jQuery
+-----------------------------------
+
+Banuprakash. C
+
+https://github.com/BanuPrakash/HTML5.JS
+
+banuprakashc@yahoo.co.in
+
+Softwares Required:
+a) Google Chrome Browser
+b) SublimeText
+c) NodeJS [check using Command Prompt:> node -v ]
+npm config set proxy http://10.255.11.11:8080
+npm config set https-proxy http://10.255.11.11:8080
+
+d) npm modules:
+	1) http-server [ npm install -g http-server ]
+	2) ws [ npm install -g ws ]
+
+----------------------------------------------------
+
+Day 1
+-----
+JavaScript
+----------
+ --> Scripting language runs on JavaScript VM.
+	VM is provided by browsers, Acrobat, etc
+
+	Popular VMs are:
+	1) V8 [ Chrome ]
+	2) SpiderMonkey [ Acrobat, FireFox]
+	3) Continum [ IE Edge]
+
+JavaScript specifications are provided by ECMA
+Current version is ECMA6 -- ES2015
+
+	--> Loosely typed
+	There is no concept of data types, but internally it
+	has different data types
+	a) String
+	b) Number
+	c) boolean
+	d) Objects
+	e) null
+	f) undefined
+
+	Keyword [var ] is used to declare a type
+
+	var data = "Smith";
+
+	data = 22; // valid
+-----------------------------------
+
+	JavaScript functions
+
+	In JavaScript we have a Function constructor
+
+	Example:
+
+	function add(x,y) {
+		return x + y;
+	}
+
+	add; <== function definition
+	add(4,5); // 9
+
+	Internally what has happend:
+
+	add = new Function("x","y","return x +y ");
+------------------------------------------------
+
+	Function expression
+
+	var greet;
+
+	if(morning) {
+		greet = function() {
+			console.log("Good Morning");
+		}
+	} else {
+		greet = function() {
+			console.log("Good Day");
+		}
+	}
+
+	greet();
+
+-----------------
+
+
+	function add(x,y) {
+		return x + y;
+	}
+
+	interally x and y are stored as arguments
+
+	arguments[0] == > value of x
+
+--------------
+
+functions are classified as:
+1) First order functions
+	Any normal function is a first order function
+	Example:
+	function add(x,y) {
+		return x + y;
+	}
+
+2) High order functions
+	Any function which takes an function as an argument
+	or returns a function is called
+	high order function
+	==> Base for functional programming
+
+	a) Imperative style
+		statements 
+	b) Object oriented prog
+		state and a behaviour
+	c) Functional prog
+		everything is functions
+		f1(f2(f3()))
+-----------------------------------------------
+
+	Lexical Environment and scope
+
+
+	var a = 10;
+
+	function test() {
+		console.log("Value of a : " + a);
+	}
+
+
+	---------------------
+
+	var a = 10;
+
+	function test() {
+		var a = 25;
+		function second() {
+			console.log("Value of a : " + a);
+		}
+	}
+----------------------------------------------
+
+High order functions
+--------------------
+
+Common High order functions used are:
+a) map
+	Given a collection it should return a new modified
+	collection
+	Input:
+		List of products
+	Output:
+		List of products with modified price
+b) reduce
+	given a collection it should return a aggregate
+	like [sum, max, product, avg]
+
+c) filter
+
+	Given a collection it should return a new filtered
+	collection
+	Input:
+		List of products
+	Output:
+		List of products with modified price
+
+		function test() {
+
+		}
+
+		var res = test(); // undefined
+------------------------------------------------------
+
+JavaScript OOP
+---------------
+
+	In JavaScript Function function
+
+	Object is sub-type of Function
+
+	String, Array, Number, Math, Date built-in Objects
+	--------------
+
+	Creating objects in JS
+
+	1) JSON
+		JavaScript Object notation
+
+		{ }
+
+		It is a key value pairs
+
+		var emp = { 
+			"id": 100,
+			"name": "Smith",
+			"age": 45,
+			"married": true,
+			"project": null
+		};
+
+		JSON understands the following types:
+		a) Number
+		b) String
+		c) boolean
+		d) null
+		e) undefined
+
+
+ 		Collection of JSON objects
+
+ 		var employees = [
+ 			{ 
+			"id": 100,
+			"name": "Smith",
+			"age": 45,
+			"married": true,
+			"project": null
+			},
+			{ 
+			"id": 101,
+			"name": "Peter",
+			"age": 23,
+			"married": false,
+			"project": null
+			}
+ 		];
+
+ 		JSON is now a std for Representation of Resource
+ 		while using RESTful Web Services
+
+
+ 	2) var emp = new Object();
+ 		emp.id = 100;
+ 		emp.name = "Raj";
+ 		emp["name"] = "Harish";
+
+ 	3) var person = Object.create(emp); // factory method
+
+ 	4) 
+ 	var product = Object.create(null);
+ 	Object.defineProperties(product,
+ 	{"name": { value : "Mouse",writable:true}, 
+ 	"price" : { value : 455, writable : false}});
+
+
+
+ 	 	Object.defineProperties(product,
+ 		{"name": 
+ 		{ value : "Mouse",writable:true, enumerable: false}, 
+ 		"price" : 
+ 		{ value : 455, writable : false}});
+
+
+ 		for(x in product) {
+ 			console.log(x);
+ 		}
+
+
+ 	5) Constructor Pattern
+
+
+ 	function Book(id, title, price) {
+ 		this.id = id;
+ 		this.title = title;
+ 		this.price = price;
+
+ 	}
+
+
+
+ 	var js = new Book(100,"JavaScript", 450.55);
+ 	var html = new Book(101,"HTML unleashed", 330.55);
+
+ 	this ==> state of object
+
+ 	Adding Behaviour
+
+
+ 	function Book(id, title, price) {
+ 		this.id = id;
+ 		this.title = title;
+ 		this.price = price;
+
+ 		this.getId = function() {
+ 			return this.id;
+ 		}
+ 	}
+ 	var js = new Book(100,"JavaScript", 450.55);
+ 	var html = new Book(101,"HTML unleashed", 330.55);
+ 	js.getId(); // 100
+
+
+ 	------------------------
+ 	Instance methods:
+ 	invoke them using objects
+
+ 		object.behaviour(argments);
+
+
+ 	Object owned instance methods
+ 	this.getId = function() {
+ 			return this.id;
+ 	}
+
+ 	Class owned instance methods
+ 	created using prototype
+ 	function Book(id, title, price) {
+ 		this.id = id;
+ 		this.title = title;
+ 		this.price = price;
+ 	}
+
+ 	Book.prototype.getId = function() {
+ 			return this.id;
+ 	}
+
+ 	--------------
+
+ 	class methods [ static methods ]
+
+ 	Book.compare = function() {
+ 		//
+ 	}
+
+ 	var js = new Book(100,"JavaScript", 450.55);	
+ 	js.getId(); // instance method
+ 	Book.compare(); // class method
+ -----------------------------------------------------------
+
+ JavaScript patterns
+ -------------------
+
+ IIFE [ Immediately invoked Function expression]
+ also know as self-invoking function
+
+(function() { // body })(); // prefer
+
+(function() { // body }());
+
+function() { // body }();
+
+Example:
+
+var x = 10;
+
+(function(data) { 
+	console.log(data); // 10
+})(x);
+
+uses of IIFE
+a) Module Pattern
+	is a pattern which provides JS encapsulation feature
+	simulate the access visibility
+
+b) Namespace Pattern
+
+c) Factory Pattern
+
+	var product = Object.create(obj);
+
+d) Chain of Responsibility
+
+	function1 ---> function2 ---> function 3
+
+	ATM
+
+	5900
+
+	1000 stack		500 stack			100 stack
