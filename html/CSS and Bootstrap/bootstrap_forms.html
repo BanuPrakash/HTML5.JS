@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form using Twitter Bootstrap</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/bootstrap-theme.css">
+</head>
+<body>
+  <header class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="navbar-inner">
+      <a href="#">
+        <img style="position: absolute; top: 0; right: 0; border: 0;" src="banu.jpg" alt="My Image">
+      </a>
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Bootstrap Forms</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Forms</a></li>
+          <li><a href="#">Grid System</a></li>
+          <li><a href="#">List</a></li>
+		      <li><a href="#">Image and Media Object</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <div class="container master-container">
+    <ul class="breadcrumb">
+        <li><a href="/">Home</a></li>
+  		<li class="active">Forms</li>
+    </ul>
+    <div class='alert alert-info fade in' data-alert='alert'>
+      <h3>
+        <strong>
+          Bootstrap Forms sample application.
+        </strong>
+      </h3>
+      <p>Here you'll see the usage of Bootstrap Form.</p>
+      <p>Developed using Nodeclipse plugin and Bootstrap</a>.</p>
+    </div>
+    
+<div class="row">
+  <div class="col-md-6">
+  <div class="panel panel-info">
+    <div class="panel-heading">Bootstrap: Basic Form</div>
+    <div class="panel-body">
+      <form role="form">
+  <div class="form-group">
+    <label class="control-label" for="exampleInputEmail1">Email</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+    <p class="help-block">Lorem ipsum dolor sit amet</p>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label" for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    <p class="help-block">Lorem ipsum dolor sit amet</p>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label" for="exampleInputFile">File</label>
+    <input type="file" id="exampleInputFile">
+    <p class="help-block">Example block-level help text here.</p>
+  </div>
+
+  <div class="form-group">
+    <div class="checkbox">
+      <label>
+        <input type="checkbox"> Active
+      </label>
+    </div>
+    <p class="help-block">Lorem ipsum dolor sit amet</p>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label">Choices</label>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" name="optionsRadios" id="optionsCheckbox1" value="option1" checked>
+        Option one is this and that&mdash;be sure to include why it's great
+      </label>
+    </div>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" name="optionsRadios" id="optionsCheckbox2" value="option2">
+        Option two can be something else and selecting it will deselect option one
+      </label>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label">Sex</label>
+    <div class="radio">
+      <label>
+        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+        Male
+      </label>
+    </div>
+    <div class="radio">
+      <label>
+        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+        Female
+      </label>
+    </div>
+    <p class="help-block">Lorem ipsum dolor sit amet</p>
+  </div>
+
+  <button type="submit" class="btn btn-default">Create User</button>
+</form>
+
+    </div>
+  </div>
+</div>
+ 
+ <div class="col-md-6">
+  <div class="panel panel-info">
+    <div class="panel-heading">Bootstrap: Inline Form</div>
+    <div class="panel-body">
+      <form class="form-inline" role="form">
+  <div class="form-group">
+    <label class="sr-only" for="exampleInputEmail2">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email">
+  </div>
+  <div class="form-group">
+    <label class="sr-only" for="exampleInputPassword2">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password">
+  </div>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox"> Remember me
+    </label>
+  </div>
+  <button type="submit" class="btn btn-default">Create User</button>
+</form>
+
+    </div>
+  </div>
+</div>
+
+</div>
+
+<div class="row">
+  
+  <div class="col-md-6">
+  <div class="panel panel-primary">
+    <div class="panel-heading">Simple Form: Inline Form</div>
+    <div class="panel-body">
+      <form accept-charset="UTF-8" action="http://simple-form-bootstrap.plataformatec.com.br/examples/create_inline" class="simple_form form-inline" id="new_user_inline" method="post" novalidate="novalidate"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="XWR3Y06VpDjCRRPeFp3EfWi+7b7edsyq+ex2comQWOs=" /></div>
+  
+
+  <div class="form-group email required user_inline_email"><label class="email required sr-only" for="user_inline_email"><abbr title="required">*</abbr> Email</label><input class="string email required form-control" id="user_inline_email" name="user_inline[email]" placeholder="Enter email" type="email" /></div>
+
+  <div class="form-group password required user_inline_password"><label class="password required sr-only" for="user_inline_password"><abbr title="required">*</abbr> Password</label><input class="password required form-control" id="user_inline_password" name="user_inline[password]" placeholder="Password" type="password" /></div>
+
+  <div class="form-group boolean optional user_inline_active"><div class="checkbox"><input name="user_inline[active]" type="hidden" value="0" /><label><input class="boolean optional" id="user_inline_active" name="user_inline[active]" type="checkbox" value="1" /> Remember me</label></div></div>
+
+  <input class="btn btn-default" name="commit" type="submit" value="Create User" />
+</form>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+  <div class="panel panel-info">
+    <div class="panel-heading">Bootstrap: Horizontal Form</div>
+    <div class="panel-body">
+      <form class="form-horizontal" role="form">
+  <div class="form-group">
+    <label for="inputEmail3" class="col-sm-3 control-label">Email</label>
+    <div class="col-sm-9">
+      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+      <p class="help-block">Lorem ipsum dolor sit amet</p>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="inputPassword3" class="col-sm-3 control-label">Password</label>
+    <div class="col-sm-9">
+      <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+      <p class="help-block">Lorem ipsum dolor sit amet</p>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputFile" class="col-sm-3 control-label">File</label>
+    <div class="col-sm-9">
+      <input type="file" id="exampleInputFile">
+      <p class="help-block">Example block-level help text here.</p>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-3 col-sm-9">
+      <div class="checkbox">
+        <label>
+          <input type="checkbox"> Active
+        </label>
+      </div>
+      <p class="help-block">Lorem ipsum dolor sit amet</p>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-sm-3 control-label">Choices</label>
+    <div class="col-sm-9">
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" name="optionsRadios" id="optionsCheckbox1" value="option1" checked>
+          Option one is this and that&mdash;be sure to include why it's great
+        </label>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" name="optionsRadios" id="optionsCheckbox2" value="option2">
+          Option two can be something else and selecting it will deselect option one
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-sm-3 control-label">Sex</label>
+    <div class="col-sm-9">
+      <div class="radio">
+        <label>
+          <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+          Male
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+          Female
+        </label>
+      </div>
+      <p class="help-block">Lorem ipsum dolor sit amet</p>
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-default">Create User</button>
+</form>
+
+
+    </div>
+  </div>
+</div>
+</div>
+
+</div>
+
+
+  <footer class="footer">
+    <div class="container">
+      <p>Copyright 2016 <a href="#">Banuprakash</a></p>
+    </div>
+  </footer>
+</body>
+</html>
