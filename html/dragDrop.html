@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Drag and Drop example</title>
+<style type="text/css">
+#leftSection {
+	width: 200px;
+	height:400px;
+	background: red;
+	margin: 50px;
+	float: left;
+}
+
+#rightSection {
+	width: 200px;
+	height:400px;
+	background: yellow;
+	margin: 50px;
+	float: left;
+}
+</style>
+<script type="text/javascript">
+	function doStartTag(e){
+		img = document.getElementById("myimg");
+		var left = document.getElementById("leftSection");
+		img.addEventListener("dragstart", doDrag, false);
+		left.addEventListener("drop", dropped, false);
+		left.addEventListener("dragover", function(e) { e.preventDefault();}, false);
+	}
+	
+	function doDrag(e) {
+		var content = '<img src="my.jpg" width="50" height="50px" id="myimg">';
+		e.dataTransfer.setData("key", content);
+	}
+	
+	function dropped(e) {
+		var left = document.getElementById("leftSection");
+		left.innerHTML = e.dataTransfer.getData("key");
+		img.src ='';
+	}
+	window.addEventListener("load", doStartTag, false);
+</script>
+</head>
+<body>
+	<section id="leftSection"></section>
+	<section id="rightSection">
+		<img src="my.jpg" width="50" height="50px" id="myimg">
+	</section>
+</body>
+</html>

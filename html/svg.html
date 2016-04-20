@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>SVG Example</title>
+<script type="text/javascript">
+	function dotask() {
+		var r = document.getElementById("myRect");
+		r.style.fill = "green";
+	}
+	
+</script>
+</head>
+<body>
+	<input type="button" value="change" onclick="dotask()" />
+	<svg>
+		<rect
+			x="10"
+			y ="10"
+			width="200"
+			height="200"
+			fill="rgb(255,0,0)"
+			stroke="green"
+			stroke-width="2px"
+			id="myRect"
+			transform="rotate(-45,100,100)"
+		/>
+	</svg>
+	
+
+</body>
+</html>

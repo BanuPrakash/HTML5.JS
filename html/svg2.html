@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>SVG</title>
+</head>
+<body>
+
+	<svg>
+		<defs>
+			<path id="p1" d = "M 20,20 L 200,200 V 400,400 H 200,200 H 600,600" />
+			<path id="p2" d = "M 20,20 Q 20,200  300,300 Q 10,300 600,600" />
+ 		</defs>
+		<g fill="red">
+		<text font-size="20px">
+			<textPath xlink:href="#p2">
+			Welcome to HTML 5 training sessions. Today we are covering Canvas and SVG
+			</textPath>
+		</text>
+		</g>
+	</svg>
+</body>
+</html>

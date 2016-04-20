@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var w = new Worker("loop.js");
+	
+	w.onmessage = function(data) {
+		alert("Completed " + data.data + " iterations");
+	}
+	function test() {
+		alert("Hi");
+	}
+</script>
+</head>
+<body>
+	<input type="button" onclick="test()" value="Say Hi">
+</body>
+</html>
